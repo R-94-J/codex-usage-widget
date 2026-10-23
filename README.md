@@ -4,7 +4,7 @@
 
 ## 启动
 
-双击 `dist/CodexUsageWidget.exe`。本机也提供 `Launch.vbs`（无黑色控制台闪烁）和 `Start.cmd`。
+双击 `CodexUsageWidget.exe`。本机也提供 `Launch.vbs`（无黑色控制台闪烁）和 `Start.cmd`。
 程序自带运行时，使用打包版不需要安装 Python，不需要管理员权限。
 
 - 在 Codex / ChatGPT 桌面窗口处于前台时显示；切到别的软件、最小化宿主时隐藏，回到宿主时恢复。
@@ -62,7 +62,7 @@
 源码以 Python 3.12、Tkinter 和 ctypes 实现，运行时仅用标准库。PyInstaller 只在打包时使用。
 
 ```powershell
-cd E:\codex_wj\codex-usage-widget
+cd E:\codex-usage-widget
 D:\python3.12\python.exe -m unittest discover -s tests -v
 D:\python3.12\python.exe tools\smoke_ui.py
 powershell -NoProfile -File tools\build.ps1
