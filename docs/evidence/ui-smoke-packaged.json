@@ -1,0 +1,21 @@
+{
+  "initial_no_focus_steal": true,
+  "follow_move": true,
+  "minimize_hide": true,
+  "restore_show": true,
+  "live_refresh": true,
+  "expand_button": true,
+  "expanded_image_size": [
+    1074,
+    375
+  ],
+  "single_instance": true,
+  "refresh_no_focus_steal": true,
+  "tray_available": true,
+  "settings_image_size": [
+    763,
+    851
+  ],
+  "settings_dialog": true,
+  "graceful_exit": true
+}

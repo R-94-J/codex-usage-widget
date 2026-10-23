@@ -1,0 +1,7 @@
+{
+  "actual_save_callback": true,
+  "custom_cny_roundtrip": true,
+  "channel_multiplier": 0.5,
+  "quote_amount": "0.00096",
+  "quote_currency": "CNY"
+}

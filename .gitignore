@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.packaging/
+build/
+dist/
+*.spec
+.pyinstaller-cache/
+
+# Local secrets, runtime output, and private diagnostic evidence.
+.env
+.env.*
+!.env.example
+*.log
+/usage-snapshot.json
+/docs/evidence/focus-startup.json
+/docs/evidence/launch.json
+/docs/evidence/live-usage-verification.json
+/docs/evidence/packaged-live-snapshot.json
+/docs/evidence/verification.json

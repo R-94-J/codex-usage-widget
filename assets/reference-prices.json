@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-23",
+  "unit": "currency_per_1000000_tokens",
+  "source": "API参考估算",
+  "cache_write_retention": "30m",
+  "models": {
+    "gpt-6-astra": {
+      "input": 10,
+      "cached": 1,
+      "cache_write": 12.5,
+      "output": 50,
+      "currency": "USD",
+      "long_context_threshold": 272000,
+      "long_input_multiplier": 2,
+      "long_output_multiplier": 1.5
+    },
+    "gpt-6.1-sol": {
+      "input": 2,
+      "cached": 0.1,
+      "cache_write": 2.5,
+      "output": 10,
+      "currency": "USD",
+      "long_context_threshold": 272000,
+      "long_input_multiplier": 2,
+      "long_output_multiplier": 1.5
+    },
+    "gpt-5.6-sol": {
+      "input": 4,
+      "cached": 0.4,
+      "cache_write": 5,
+      "output": 20,
+      "currency": "USD",
+      "long_context_threshold": 272000,
+      "long_input_multiplier": 2,
+      "long_output_multiplier": 1.5
+    }
+  },
+  "aliases": {
+    "gpt-5.6": "gpt-5.6-sol"
+  },
+  "service_tier_multipliers": {
+    "gpt-6-astra": {"standard": 1, "fast": 2, "flex": 0.5, "batch": 0.5, "ultrafast": 6},
+    "gpt-6.1-sol": {"standard": 1, "fast": 2, "flex": 0.5, "batch": 0.5, "ultrafast": 6},
+    "gpt-5.6-sol": {"standard": 1, "fast": 2, "flex": 0.5, "batch": 0.5}
+  },
+  "sources": {
+    "gpt-6-astra": "https://developers.openai.com/api/docs/models/gpt-6-astra.md",
+    "gpt-6.1-sol": "https://developers.openai.com/api/docs/models/gpt-6.1-sol.md",
+    "gpt-5.6-sol": "https://developers.openai.com/api/docs/models/gpt-5.6-sol.md",
+    "pricing": "https://developers.openai.com/api/docs/pricing.md",
+    "fast": "https://developers.openai.com/api/docs/guides/fast-mode.md",
+    "ultrafast": "https://developers.openai.com/api/docs/guides/ultrafast-mode.md"
+  },
+  "caveats": {
+    "long_context": "Input strictly greater than 272000 tokens on one request doubles all input/cache rates and multiplies output by 1.5 for that entire request.",
+    "cache_write": "The flat reference cache_write rate is for 30-minute retention. The separate 12-hour write rate is twice this rate and is not inferred from logs.",
+    "regional": "Regional processing and FedRAMP premiums are not inferred. The official pricing page lists 10% uplifts; apply only when independently known.",
+    "gpt-5.6-sol": "Promotional pricing is stated as available at least through 2026-11-21. This is not a confirmed end date and no later price is assumed.",
+    "tier": "default means Standard; priority is the documented alias of Fast. Missing tier uses Standard as a reference assumption, not a verified account default. auto/scale and unlisted model-tier combinations cannot be priced.",
+    "scope": "Token-only API reference estimate, not a bill, subscription debit, provider quote, or historical rate reconstruction. Tool fees and exchange-rate conversions are excluded. Runtime never refreshes this snapshot online."
+  }
+}
